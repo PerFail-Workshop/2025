@@ -103,6 +103,14 @@ h6 {
     line-height: 24px;
 }
 
+b {
+    font-weight: bold !important;
+}
+
+ol {
+    padding-left: 40px !important;
+}
+
 /* --------------------------------------
  * LINK STYLE
  *------------------------------------------*/
@@ -233,56 +241,24 @@ button:focus,
     z-index: 9;
 }
 
-/*Logo*/
 .navbar-brand {
     padding-top: 10px;
-    height: auto;
-    font-size: 24px;
-    margin: 2px 0 !important;
+    font-size: 2em;
+    margin: 2px 25px 2px 0!important;
+    font-weight: 800;
+    color: var(--accent-light-color);
 }
 
-@media (max-width : 768px) {
-    .navbar-brand {
-        width: 600px;
-    }
-
-    .navbar-brand img {
-        max-width: 100%;
-        height: auto;
-    }
+.navbar-brand:hover {
+    color: var(--accent-color);
 }
-
-/*navbar*/
 
 .navbar {
     border-radius: 0;
-    padding: 30px 0;
-    background: transparent;
+    background: white;
     margin: 0;
     font-size: 15px;
     text-transform: uppercase;
-    backdrop-filter: blur(5px);
-}
-
-@media (max-width : 768px) {
-    .navbar {
-        padding: 10px;
-    }
-}
-
-/*navbar toggle*/
-.navbar-toggle {
-    margin: 5px 0;
-    padding: 11px 10px;
-    background: transparent;
-}
-
-.navbar-toggle:hover {
-    color: #fff;
-}
-
-.navbar-toggle .icon-bar {
-    background: #fff;
 }
 
 /*Navigation Style*/
@@ -291,42 +267,36 @@ button:focus,
     margin-right: -15px;
 }
 
-.main-menu .nav li a {
-    color: #ffffff;
+.navbar-nav {
+    text-align: center;
+}
+
+.nav-link {
+    color: #483636;
     font-weight: 500;
     padding: 15px 0 15px 30px;
 }
 
-.main-menu .nav li a:hover,
-.main-menu .nav li.active a {
+.nav-link:hover {
     color: var(--accent-color);
     background: transparent;
 }
 
-.main-menu .nav li a:focus {
+.nav-link:focus {
     background: transparent;
 }
 
-@media (max-width : 991px) {
-    .main-menu .nav li a {
-        padding-left: 15px;
-    }
+.navbar-toggler {
+    border-color: #483636;
 }
 
-@media (max-width : 768px) {
-    .main-menu .nav li {
-        text-align: center;
-    }
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    box-shadow: none;
+}
 
-    .main-menu .nav li a {
-        padding: 5px 0;
-        color: var(--accent-really-dark-color);
-    }
-
-    .navbar-collapse {
-        margin-top: 10px;
-        background: #fff;
-    }
+.navbar-bars {
+    color: #483636;
 }
 
 
@@ -365,18 +335,23 @@ button:focus,
  *-------------------*/
 
 .jumbotron {
-    background: url("../img/washington-monument-cherry-blossom-washington-dc.jpg");
-    background-size: cover;
     padding: 0;
     margin: 0;
     height: 100vh;
     min-height: 700px;
     vertical-align: middle;
     position: relative;
+    overflow: hidden;
+}
+
+.jumbotron-image {
+    background: url("../img/washington-monument-cherry-blossom-washington-dc.jpg");
+    height: 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-    overflow: hidden;
+    filter: blur(5px);
 }
 
 .jumbotron .content {
@@ -392,19 +367,18 @@ button:focus,
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
-    backdrop-filter: blur(5px);
 }
 
 .jumbotron .content h1 {
     color: #ffffff;
-    font-weight: bold;
+    font-weight: 800;
+    font-size: 3em;
 }
 
 .jumbotron .content p.lead {
     font-size: 24px;
     font-weight: 600;
     line-height: 1.5em;
-    color: rgba(255, 255, 255, .7);
 }
 
 .jumbotron .content .event-date {
@@ -434,7 +408,7 @@ button:focus,
     }
 
     .jumbotron .content h1 {
-        font-size: 26px;
+        font-size: 2em;
     }
 
     .jumbotron .content p.lead {
