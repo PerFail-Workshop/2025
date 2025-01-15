@@ -834,4 +834,6 @@ hr:after {
 
 .abstract {
     padding-top: 0.5em;
+    text-align: justify;
+    border: none;
 }
