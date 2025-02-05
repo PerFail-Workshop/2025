@@ -728,9 +728,9 @@ hr:after {
 }
 
 .agenda-title {
-    font-size: 0.75em;
+    font-size: 1em;
 }
 
-#program-time {
-    vertical-align: top;
+.team .thumbnail h3 small {
+    line-height: 1em;
 }
